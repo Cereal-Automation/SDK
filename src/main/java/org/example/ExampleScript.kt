@@ -1,9 +1,9 @@
 package org.example
 
-import com.cereal.api.script.ComponentProvider
 import com.cereal.api.script.Script
 import com.cereal.api.script.ScriptManifest
 import com.cereal.api.script.ScriptStatus
+import com.cereal.api.script.component.ComponentProvider
 
 @ScriptManifest(
     name = "Example script",
