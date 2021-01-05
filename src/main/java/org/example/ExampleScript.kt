@@ -1,5 +1,6 @@
 package org.example
 
+import com.cereal.api.script.ComponentProvider
 import com.cereal.api.script.Script
 import com.cereal.api.script.ScriptManifest
 import com.cereal.api.script.ScriptStatus
@@ -16,16 +17,18 @@ class ExampleScript: Script {
 
     override var status: ScriptStatus = ScriptStatus.RUNNING
 
-    override suspend fun onFinish() {
-
-    }
-
-    override suspend fun onStart(): Boolean {
+    override suspend fun onStart(provider: ComponentProvider): Boolean {
         return true
     }
 
-    override suspend fun loop(): Int {
-
-        return 100
+    override suspend fun loop(provider: ComponentProvider): Int {
+        provider.logger().debug("TEST")
+        return 1000
     }
+
+    override suspend fun onFinish(provider: ComponentProvider) {
+
+    }
+
+
 }
