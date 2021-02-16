@@ -1,0 +1,15 @@
+name: CEREAL Script - First interaction
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/first-interaction@v1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          issue-message: 'Thank you for opening your first issue and helping us to making CEREAL better! Please make sure to join our [Discord](https://www.google.com).'
