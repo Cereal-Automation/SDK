@@ -29,5 +29,4 @@ class ExampleScript : Script<ExampleScriptConfiguration> {
 
     override suspend fun onFinish(configuration: ExampleScriptConfiguration?, provider: ComponentProvider) {
     }
-
 }

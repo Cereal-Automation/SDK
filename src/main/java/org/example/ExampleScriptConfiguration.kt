@@ -5,7 +5,7 @@ import com.cereal.api.script.configuration.ScriptConfigurationGroup
 import com.cereal.api.script.configuration.ScriptConfigurationItem
 
 @ScriptConfigurationGroup("examplescript")
-interface ExampleScriptConfiguration: ScriptConfiguration {
+interface ExampleScriptConfiguration : ScriptConfiguration {
 
     @ScriptConfigurationItem(
         keyName = "discord_webhook",
@@ -17,5 +17,4 @@ interface ExampleScriptConfiguration: ScriptConfiguration {
     fun discordWebhookUrl(): String {
         return "DiscordURL"
     }
-
 }
